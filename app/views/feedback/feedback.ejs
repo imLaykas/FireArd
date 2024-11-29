@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/feedback.css">
+    <link rel="icon" type="image/x-icon" href="assets/img-logo-removebg.png">
+    <title>Feedback</title>
+</head>
+<body>  
+    <div class="erros">
+    <%if(errosValidacao){%>
+        <ul>
+            <%for(var i=0;i<errosValidacao.length;i++){%>
+                <li>
+                    <%=errosValidacao[i].param%> - <%=errosValidacao[i].msg%>
+                </li>
+            <%}%>
+        </ul>
+    <%}%>
+</div>
+  
+    <header>
+        <nav id="navbar">
+            <img src="/imgs/img-logo.png" alt="" id="img-logo">
+    
+            <ul id="nav-list">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback"  style="border-bottom:2px solid #FFFFFF">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+                </ul>
+            
+            
+            <button class="btn-default"><a href="/login">Conta</a></button>
+            <button id="mobile-btn"><i id="menu-icon" class="fa-solid fa-bars" style="color: #FFFFFF;"></i></button>
+        </nav>
+    
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+                    <li class="nav-item"><a href="/">Inicio</a></li>
+                    <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                    <li class="nav-item"><a href="/feedback"  style="border-bottom:2px solid #FFFFFF">Contato</a></li>
+                    <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+                    
+            </ul>
+            <button class="btn-default"><a href="/login">Conta</a></button>
+        </div>
+    </header>
+
+<section class="container">
+    <main id="main-content">
+        <div class="main-card-left">
+            <div class="main-logo">
+                <h2>FireArd</h2>
+            </div>
+
+            <section class="contatos-main">
+                <i class="fa-regular fa-envelope"></i>
+                <h3>E-mail</h3>
+                <span>Precisa de ajuda? Entre em contato via e-mail.</span>
+                <p>fireard.tcc@gmail.com</p>
+            </section>
+
+            <section class="contatos-main">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Visite-nos</h3>
+                <span>Venha conhecer o nosso escritório.</span>
+                <p>Ver em <a href="#maps">Google Maps</a></p>
+            </section>
+
+            <section class="contatos-main">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Ligue para nós</h3>
+                <span>Atendimento das 8:00 às 14:00.</span>
+                <a href="#telefone">11 97777-7777</a>
+            </section>
+        </div>
+
+        <div class="main-card-right">
+            <div class="title-right">
+                <h1>Tem ideias? Entre em contato com o nosso time.</h1>
+                <span>Como está sendo sua experiencia no site? </span>
+            </div>
+
+            <section class="main-group-input">
+                <form action="/feedback" method="POST">
+                    <div class="input-contatos">
+                            <input type="text" placeholder="Digite seu Nome" id="nome" value="<%=feedback.nome_feedback%>" name="nome" >
+                            <input type="text" placeholder="Digite seu Email" id="email" value="<%=feedback.email_feedback%>" name="email">
+                    </div>
+                 
+                        <div class="input-msg"> 
+                        <textarea id="mensagem" name="mensagem" rows="4" cols="50"><%=feedback.mensagem%></textarea>
+                        <label for="mensagem">Mensagem:</label>
+                        
+                    </div>
+                
+                    <div class="botao-enviar">
+                        <button type="submit" value="gravar">Enviar Feedback</button>
+                    </div>
+                </form>
+                
+            </section>
+        </div>
+    </main>
+</section>
+
+<footer>
+    <p>Copyright 2024</p>
+    <p>Desenvolvido por Giullya, Laykan e Rafaely</p>
+</footer>
+
+<!-- Javascript da header p/ mobile -->
+<script src="/js/menuMobile.js"></script>
+</body>
+</html>

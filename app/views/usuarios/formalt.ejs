@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/alterar.css">
+    <link rel="icon" type="image/x-icon" href="assets/img-logo-removebg.png">
+    <title>Alterar Informações</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="/imgs/img-logo.png" alt="" id="img-logo">
+    
+            <ul id="nav-list">
+            <li class="nav-item"><a href="/">Inicio</a></li>
+            <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+            <li class="nav-item"><a href="/informacoes">Informações</a></li>
+            <li class="nav-item"><a href="/feedback">Contato</a></li>
+            <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+                
+            <button type="button" class="btn-default"><a href="/usuarios"><i class="fa-solid fa-user" style="color: #FFFFFF;"></i></a></button>
+        
+            <button id="mobile-btn"><i id="menu-icon" class="fa-solid fa-bars" style="color: #FFFFFF;"></i></button>
+        </nav>
+    
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+                <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+            <a href="/usuarios"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+            <a href="/logout"><i class="fa-solid fa-user-slash" style="color: #ffffff;"></i></a>
+        </div>
+    </header>
+    <section id="container">
+        <div class="title">
+            <h1>Perfil</h1>
+            <span>Essa informação é particular e não 
+                será compartilhada com outras 
+                pessoas.</span>
+        </div>
+
+        <main>
+                <div class="title-main">
+         <h4>Altere suas informações abaixo:</h4>
+                </div>
+
+<% if(typeof usuario[0] === "undefined"){ %>
+    <form action="/alteracao" method="POST">
+        <div class="grupo-input-alteracao">
+            <input hidden type="text" name="id" value="<%=usuario.id%>"/>
+            <div class="grupo-input-label">
+                <input type="text" id="cpf" value="<%=usuario.cpf%>" name="cpf" placeholder="Digite o cpf"/>
+                <label for="cpf">CPF: </label>
+            </div>
+            
+            <div class="grupo-input-label">
+            <input type="text" id="nome" value="<%=usuario.nome%>" name="nome" placeholder="Seu nome aqui"/>
+            <label for="nome">Nome: </label>
+        </div>
+
+            <div class="grupo-input-label">
+            <input type="text" id="email" value="<%=usuario.email%>" name="email" placeholder="Seu email aqui"/>
+            <label for="email">Email: </label>
+        </div>
+
+            <div class="grupo-input-label">
+            <input type="text" hidden id="senha" value="<%=usuario.senha%>" name="senha" placeholder="senha"/>
+            <label for="senha" hidden>Senha: </label>
+        </div>
+
+            <div class="grupo-input-label">
+            <input type="text" id="endereco" value="<%=usuario.endereco%>" name="endereco" placeholder="Rua Tal"/>
+            <label for="endereco">Endereço: </label>
+        </div>
+            
+            <div class="grupo-input-label">
+            <input type="text" id="telefone" value="<%=usuario.telefone%>" name="telefone" placeholder="11 912345-6789"/>
+            <label for="telefone">Telefone: </label>
+        </div>
+        </div>
+       
+        <div class="button-container">
+            <button type="submit" value="gravar" class="btn-default">Confirmar</button>
+            <button type="button" class="btn-default-logout"><a href="/usuarios">Voltar</a></button>
+            </div>
+    </form>
+
+
+        
+    <p><%= errosValidacao[0].msg %></p>
+<% }else{ %>
+<form action="/alteracao" method="POST">
+    <div class="grupo-input-alteracao">
+        <input hidden type="text" name="id" value="<%=usuario[0].id_usuario%>"/>
+        
+        <div class="grupo-input-label">
+        <input type="text" id="cpf" value="<%=usuario[0].cpf%>" name="cpf" placeholder="Digite o cpf"/>
+        <label for="cpf">CPF: </label>
+    </div>
+        
+        <div class="grupo-input-label">
+        <input type="text" id="nome" value="<%=usuario[0].nome%>" name="nome" placeholder="Seu nome aqui"/>
+        <label for="nome">Nome: </label>
+    </div>
+
+        <div class="grupo-input-label">
+        <input type="text" id="email" value="<%=usuario[0].email%>" name="email" placeholder="Seu email aqui"/>
+        <label for="email">Email: </label>
+    </div>
+
+        <div class="grupo-input-label">
+        <input type="text" hidden id="senha" value="<%=usuario[0].senha%>" name="senha" placeholder="senha"/>
+        <label for="senha" hidden>Senha: </label>
+    </div>
+
+        <div class="grupo-input-label">
+        <input type="text" id="endereco" value="<%=usuario[0].endereco%>" name="endereco" placeholder="Rua Tal"/>
+        <label for="endereco">Endereço: </label>
+    </div>
+
+        <div class="grupo-input-label">
+        <input type="text" id="telefone" value="<%=usuario[0].telefone%>" name="telefone" placeholder="11 912345-6789"/>
+        <label for="telefone">Telefone: </label>
+    </div>
+    </div>
+    <div class="button-container">
+    <button type="submit" value="gravar" class="btn-default">Confirmar</button>
+    <button type="button" class="btn-default-logout"><a href="/usuarios">Voltar</a></button>
+    </div>
+</form>
+<% } %>
+        </main>
+    </section>
+    
+    <footer>
+        <p>Copyright 2024</p>
+         <p>Desenvolvido por Giullya, Laykan e Rafaely</p>
+    </footer>
+
+    <script src="/js/menuMobile.js"></script>
+</body>
+</html>

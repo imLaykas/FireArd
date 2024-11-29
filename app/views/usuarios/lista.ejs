@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/perfil.css">
+    <link rel="icon" type="image/x-icon" href="assets/img-logo-removebg.png">
+    <title>Perfil</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="/imgs/img-logo.png" alt="" id="img-logo">
+    
+            <ul id="nav-list">
+            <li class="nav-item"><a href="/">Inicio</a></li>
+            <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+            <li class="nav-item"><a href="/informacoes">Informações</a></li>
+            <li class="nav-item"><a href="/feedback">Contato</a></li>
+            <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+                
+            <button type="button" class="btn-default"><a href="/usuarios"><i class="fa-solid fa-user" style="color: #FFFFFF;"></i></a></button>
+        
+            <button id="mobile-btn"><i id="menu-icon" class="fa-solid fa-bars" style="color: #FFFFFF;"></i></button>
+        </nav>
+    
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+                <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+            <a href="/usuarios"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+            <a href="/logout"><i class="fa-solid fa-user-slash" style="color: #ffffff;"></i></a>
+        </div>
+    </header>
+
+    <section id="container">
+        <div class="title">
+            <h1>Perfil</h1>
+            <span>Essa informação é particular e não 
+                será compartilhada com outras 
+                pessoas.</span>
+        </div>
+
+        <main>
+            <%for(var i=0;i<lista.length;i++){%>
+            <div class="card">
+                <div class="title-card">
+         <h4>Olá, <strong><%=lista[i].nome%></strong> <br> Abaixo, estão suas Informações pessoais.</h4>
+                </div>
+
+
+                <div class="tabela">
+                
+                    <table>
+                        
+                            <tr>
+                                <th hidden>ID</th>
+                                <th>CPF</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Endereço</th>
+                                <th>Telefone</th>
+                            </tr>
+                        <tr>
+                            <td hidden><%=lista[i].id_usuario%></td>
+                            <td><%=lista[i].cpf%></td>
+                            <td> <%=lista[i].nome%></td>
+                            <td><%=lista[i].email%></td>
+                            <td hidden><%=lista[i].senha%></td>
+                            <td><%=lista[i].endereco%></td>
+                            <td><%=lista[i].telefone%></td>
+                            <!-- <td><a href="/editar/<%=lista[i].id_usuario%>">ALTERAR</a></td> -->
+                        </tr>
+                        
+                        <div class="espaco-btn">
+                            <button type="button" class="btn-default-logout"><a href="/logout"><i class="fa-solid fa-user-slash" style="color: #C71818;"></i>  DESCONECTAR</a></button>
+                            <button type="button" class="btn-default"><a href="/editar/<%=lista[i].id_usuario%>">ALTERAR</a></button>
+                        </div>        
+                        <%}%>
+                    
+                    </table>
+                </div>
+
+
+            </div>
+        </main>
+    </section>
+    
+    <footer>
+        <p>Copyright 2024</p>
+         <p>Desenvolvido por Giullya, Laykan e Rafaely</p>
+    </footer>
+
+    <script src="/js/menuMobile.js"></script>
+</body>
+</html>

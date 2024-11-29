@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0px;
+    height: 80%;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    background: #FFFFFF;
+    border: 2px solid #F64C32;
+    box-shadow: 0 0px 5px #FB6D10, 0 10px 10px #fb6e106b;
+}
+.titulosMain{
+    display: flex;
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulosMain > h1 {
+    font-family: 'Kanit', sans-serif;
+    color: #050505;
+    font-size: 44px;
+}
+
+.titulosMain > h2 {
+    font-family: 'Teko', sans-serif;
+    color: #F30000;
+    font-weight: 700;
+    font-size: 48px;
+}
+.titulosMain > span{
+    font-family: 'Inter', sans-serif;
+    color: #757575;
+    font-weight: 500;
+    font-size: 16px;
+}
+main input{
+    background-color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    color: #757575;
+    border: 1px solid #F30000;
+    margin: 8px 0;
+    padding: 1rem 1.25rem;
+    border-radius: 20px;
+    width: 35%;
+    outline: none;
+}
+::-webkit-input-placeholder{
+    color: #757575;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: medium;
+}
+#grupo-input-cadastro{
+    position: relative;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    margin: 10px 0px;
+    
+}
+
+
+/* input do login */
+#grupo-input-login{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin: 10px 0px;
+    
+}
+
+#grupo-input-login i{
+    font-size: 20px;
+    cursor: pointer;
+    top: 100px;
+    position: absolute;
+    color: #374151;
+}
+
+/* fim do input login */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+form span{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    margin: 8px 0px;
+}
+form a{
+    font-family:  'Inter', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    color: #FB6D10;
+    text-decoration: none;
+}
+
+#card-requisitos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#card-requisitos h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #374151;
+}
+
+#card-requisitos p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+main #btn-criar{
+    background-color: #C71818;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #f5f5f5;
+    width: 40%;
+    margin: 8px 0;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+main #btn-criar:hover{
+    background-color: #b51a1a;
+}
+#botao-login{
+    background-color: #C71818;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #f5f5f5;
+    width: 30%;
+    margin: 8px 0;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+#botao-login:hover{
+    background-color: #b51a1a;
+}
+
+@media  (min-width: 0px) and (max-width: 1170px){
+    main{
+        min-height: 100%;
+        width: 75%;
+        padding-top: 0px;
+    }
+
+    .titulosMain{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+    .titulosMain > h1 {
+        font-family: 'Kanit', sans-serif;
+        color: #050505;
+        font-size: 28px;
+        text-align: center;
+    }
+    .titulosMain > h2 {
+        font-family: 'Teko', sans-serif;
+        color: #F30000;
+        margin-top: 5%;
+        font-weight: 700;
+        font-size: 34px;
+    }
+
+    .titulosMain > span{
+        font-family: 'Inter', sans-serif;
+        color: #757575;
+        font-weight: 500;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    ::-webkit-input-placeholder{
+        color: #757575;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    main input{
+        background-color: #FFFFFF;
+        font-family: 'Inter', sans-serif;
+        color: #757575;
+        border: 1px solid #F30000;
+        margin: 8px 0;
+        padding: 10px 14px;
+        border-radius: 12px;
+        width: 80%;
+        outline: none;
+        transition: all 0.3s ease 0s;
+    }
+
+    #grupo-input-cadastro i{
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        top: 35%;
+        right: 16%;
+        color: #374151;
+    }
+
+    #grupo-input-login i{
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        top: 68%;
+        right: 15%;
+        color: #374151;
+    }
+    #card-requisitos h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        color: #374151;
+    }
+
+    #card-requisitos p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: #6b7280;
+    }
+
+    main #btn-criar{
+        background-color: #C71818;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        color: #f5f5f5;
+        width: 80%;
+        margin: 8px 0;
+        border: none;
+        border-radius: 12px;
+        padding: 8px 10px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    form span{
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        margin: 8px 0px;
+    }
+    
+}

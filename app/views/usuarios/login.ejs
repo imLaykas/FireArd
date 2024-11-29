@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/css/global-conta.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="icon" type="image/x-icon" href="assets/img-logo-removebg.png">
+        <title>Login</title>
+    </head>
+<body>
+    <% if (erro) { %>
+        <p><%= erro %></p>
+    <% } %>
+    <header>
+        <nav id="navbar">
+            <img src="/imgs/img-logo.png" alt="" id="img-logo">
+    
+            <ul id="nav-list">
+            <li class="nav-item"><a href="/">Inicio</a></li>
+            <li class="nav-item"><a href="/informacoes">Informações</a></li>
+            <li class="nav-item"><a href="/feedback">Contato</a></li>
+            <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+            <button class="btn-default"><a href="/login">Conta</a></button>
+        
+            <button id="mobile-btn"><i id="menu-icon" class="fa-solid fa-bars" style="color: #FFFFFF;"></i></button>
+        </nav>
+    
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+            <button class="btn-default"><a href="/login">Conta</a></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="titulosMain">
+                <h2>FireArd</h2>
+                <h1>Crie sua conta ou Entre nela!</h1>
+                <span>Acompanhe sua propriedade em tempo real e garanta a alta segurança</span>
+            </section>
+
+            <form action="/login" method="post">
+                <div id="grupo-input-login">
+                    <input type="text" id="email" name="email" placeholder="Digite seu email" required>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                </div>
+                <button id="botao-login"type="submit" value="Entrar">Entrar</button>
+                <span><strong>Não possui conta? </strong><a href="/registro">Crie já!</a></span>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <p>Copyright 2024</p>
+         <p>Desenvolvido por Giullya, Laykan e Rafaely</p>
+    </footer>
+    <script src="/js/menuMobile.js"></script>
+    <script src="/js/validar-senha.js"></script>
+</body>
+</html>

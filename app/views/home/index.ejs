@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="icon" type="image/x-icon" href="assets/img-logo-removebg.png">
+        <title>Inicio</title>
+    </head>
+</head>
+
+<body>  
+ <header>
+    <nav id="navbar">
+        <img src="/imgs/img-logo.png" alt="" id="img-logo">
+
+        <ul id="nav-list">
+            <li class="nav-item"  style="border-bottom:2px solid #FFFFFF"><a href="/">Inicio</a></li>
+            <% if (usuario) { %>
+                <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+                <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+        </ul>
+        
+        <button type="button" class="btn-default"><a href="/usuarios"><i class="fa-solid fa-user" style="color: #FFFFFF;"></i></a></button>
+        <% }else { %>
+            <li class="nav-item"><a href="/informacoes">Informações</a></li>
+            <li class="nav-item"><a href="/feedback">Contato</a></li>
+            <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+    </ul>
+    
+    <button class="btn-default"><a href="/login">Conta</a></button>
+    <% } %>
+            <button id="mobile-btn"><i id="menu-icon" class="fa-solid fa-bars" style="color: #FFFFFF;"></i></button>
+    </nav>
+
+    <div id="mobile-menu">
+        <ul id="mobile-nav-list">
+        <li class="nav-item" style="border-bottom:2px solid #FFFFFF"><a href="/">Inicio</a></li>
+            <% if (usuario) { %>
+            <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+            <li class="nav-item"><a href="/informacoes">Informações</a></li>
+            <li class="nav-item"><a href="/feedback">Contato</a></li>
+            <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+          
+        </ul>
+        <button type="button" class="btn-default"><a href="/usuarios"><i class="fa-solid fa-user" style="color: #FFFFFF;"></i></a></button>
+        
+        
+        <% }else { %>
+            <li class="nav-item"><a href="/informacoes">Informações</a></li>
+            <li class="nav-item"><a href="/feedback">Contato</a></li>
+            <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+          
+    </ul>
+    <button class="btn-default"><a href="/login">Conta</a></button>
+    
+    <% } %>
+    </div>
+</header>
+
+<!--Conteúdo-->
+<div class="container">
+    <section class="tituloConteudo"> 
+        <div class="areaTitulo">
+            <figure>
+                <img src="/imgs/fogovetor.png">
+            </figure>
+            <h1>A alta segurança de <br> incêndios na sua propriedade</h1>
+            <figure>
+                <img src="/imgs/fogovetor.png">
+            </figure>
+        </div>
+        <hr>
+        <a href="#card-left" id="tag-a"><button type="button" class="btn-content">Conhecer</button> </a>  
+    </section>
+
+    <main>
+        <div id="card-left">
+            <h1>Como utilizar o <span>monitoramento</span> <br> do jeito certo</h1>
+            <section id="card-paragrafo">
+                    <p>Crie sua conta ou entre nela.</p>
+                   <br><p> Em seguida, verifique se o aparelho está instalado corretamente na sua propriedade.</p>
+                   <br><p> A partir daí, a sua propriedade está em alerta sobre possíveis incidentes.</p>
+            </section>
+            <% if (usuario) { %>
+                <a href="/informacoes"><button type="button" id="btn-content-main"><i class="fa-solid fa-arrow-right"></i></button></a>
+                <% }else { %>
+                <a href="/login"><button type="button" id="btn-content-main"><i class="fa-solid fa-arrow-right"></i></button></a>
+                <% } %>
+            </div>
+
+        <div class="card-right">
+         <img src="/imgs/foto-content-home.png" alt="">
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright 2024</p>
+         <p>Desenvolvido por Giullya, Laykan e Rafaely</p>
+    </footer>
+   </div>
+
+
+<!-- javascript da header p/ mobile -->
+<script src="/js/menuMobile.js"></script>
+
+    
+</body>
+
+</body>
+
+</html>

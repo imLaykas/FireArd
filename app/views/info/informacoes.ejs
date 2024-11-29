@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/informacoes.css">
+    <link rel="icon" type="image/x-icon" href="assets/img-logo-removebg.png">
+    <title>Informações</title>
+</head>
+<body>
+    
+    <header>
+        <nav id="navbar">
+            <img src="/imgs/img-logo.png" alt="" id="img-logo">
+
+          
+            <ul id="nav-list">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <% if (usuario) { %>
+                    <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+                    <li class="nav-item"  style="border-bottom:2px solid #FFFFFF"><a href="/informacoes">Informações</a></li>
+                    <li class="nav-item"><a href="/feedback">Contato</a></li>
+                    <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+            
+            <button type="button" class="btn-default"><a href="/usuarios"><i class="fa-solid fa-user" style="color: #FFFFFF;"></i></a></button>
+            <% }else { %>
+                <li class="nav-item"><a href="/informacoes" style="border-bottom:2px solid #FFFFFF">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+        </ul>
+        
+        <button class="btn-default"><a href="/login">Conta</a></button>
+        <% } %>
+        <button id="mobile-btn"><i id="menu-icon" class="fa-solid fa-bars" style="color: #FFFFFF;"></i></button>
+        </nav>
+    
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+            <li class="nav-item"><a href="/">Inicio</a></li>
+                <% if (usuario) { %>
+                <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+                <li class="nav-item" style="border-bottom:2px solid #FFFFFF"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+            
+            <button type="button" class="btn-default"><a href="/usuarios"><i class="fa-solid fa-user" style="color: #FFFFFF;"></i></a></button>
+            <% }else { %>
+                <li class="nav-item" style="border-bottom:2px solid #FFFFFF"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos">Sobre nós</a></li>
+        </ul>
+        
+        <button class="btn-default"><a href="/login">Conta</a></button>
+        <% } %>
+        </div>
+    </header>
+
+
+    <section id="container">
+        <main id="main">
+            <div class="card-left">
+                <h1>O que fazer em uma situação de incêndio</h1>
+                <br>
+                <p>
+                    Em primeiro instante, vamos compreender o que são incêndios.
+                     Basicamente são combustões descontroladas que liberam calor,
+                      luz e gases. Podem ser causados por fatores naturais ou humanos
+                       e representam riscos significativos para vidas, propriedades e o meio ambiente.. 
+                       Aqui estão os passos principais que você deve seguir:
+                </p>
+            </div>
+
+            <figure>
+                <img src="/imgs/1foto.jpg" alt="Bombeiros">
+                
+            </figure>
+        </main>
+            
+            <section class="titles">
+                <div class="content-titles"> <!-- Titulo principal-->
+                    <h1>O que fazer até os bombeiros chegarem?</h1>
+                    <p>Sempre mantenha a calma e aja rapidamente. Aqui estão os principais passos que você deve seguir:</p>
+                </div>
+                <div class="content-titles">   <!-- Primeiro texto-->
+                    <h2>Avalie a Situação</h2>
+                    <p>Determine o tamanho e a intensidade do fogo. Se for um incêndio 
+                        pequeno e controlável, você pode tentar apagá-lo com um extintor ou
+                         outro método apropriado. </p>
+                </div>
+                <div class="content-titles"> <!-- Segundo texto-->
+                    <h2>Use um Extintor de Incêndio</h2>
+                    <p>Se você tiver um extintor e se sentir seguro para usá-lo, lembre-se da regra <strong>PASS:</strong> <br>
+                        <strong>Pull</strong> (puxe o pino para liberar o mecanismo). <br>
+                        <strong>Aim </strong> (aponte o bico para a base do fogo). <br>
+                        <strong>Squeeze </strong> (pressione o manípulo para liberar o agente extintor). <br>
+                        <strong>Sweep </strong> (faça movimentos de varredura de um lado para o outro). </p>
+                </div>
+                <div class="content-titles"> <!-- Terceiro texto-->
+                    <h2>Desconecte a Energia, se Seguro</h2>
+                    <p>Se o incêndio for causado por um curto-circuito ou outro problema 
+                        elétrico e você puder fazê-lo com segurança, desconecte a fonte de 
+                        energia. </p>
+                </div>
+                <div class="content-titles"> <!-- Quarto texto-->
+                    <h2>Evacue Imediatamente</h2>
+                    <p>Se o fogo parecer fora de controle ou se você não tiver certeza de que 
+                        pode apagá-lo, evite tentar combater o incêndio e concentre-se em sair
+                        do local de forma segura. </p>
+                </div>
+                <div class="content-titles"> <!-- Quinto texto-->
+                    <h2>Use Rota de Fuga</h2>
+                    <p>Siga a rota de evacuação designada ou encontre a saída mais próxima.
+                         Evite usar elevadores, pois eles podem ficar fora de funcionamento ou 
+                    levar você a um andar perigoso.</p>
+                </div>
+                <div class="content-titles"> <!-- Sexto texto-->
+                <h2>Siga para um Ponto Seguro</h2>
+                    <p>Após sair do prédio ou da área afetada, vá para um local seguro e não entre em pânico. </p>
+                </div>
+                <div class="content-titles"> <!-- Sétimo texto-->
+                    <h2>Chame os Bombeiros</h2>
+                    <p>Assim que estiver seguro, ligue para os bombeiros (em muitos lugares, o 
+                        número de emergência é 193) e forneça informações detalhadas sobre 
+                        a localização e a situação do incêndio. </p>
+                </div>
+                <div class="content-titles"> <!-- Oitavo texto-->
+                    <h2>Não Volte até ser Autorizado</h2>
+                    <p>Não retorne ao edifício até que os bombeiros ou autoridades locais
+                         deem a autorização. </p>
+                </div>
+            </section>
+            <a href="#main"><button type="button" id="botao-voltar"><i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i></button></a>
+        </section>
+    
+
+    <footer>
+        <p>Copyright 2024</p>
+         <p>Desenvolvido por Giullya, Laykan e Rafaely</p>
+    </footer>
+    <!-- javascript da header p/ mobile -->
+<script src="/js/menuMobile.js"></script>
+
+</body>
+</html>

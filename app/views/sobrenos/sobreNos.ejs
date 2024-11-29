@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/sobre-nos.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="icon" type="image/x-icon" href="assets/img-logo-removebg.png">
+
+    <title>Sobre nós</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <img src="/imgs/img-logo.png" alt="" id="img-logo">
+
+      
+            <ul id="nav-list">
+                <li class="nav-item"><a href="/">Inicio</a></li>
+                <% if (usuario) { %>
+                    <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+                    <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                    <li class="nav-item"><a href="/feedback">Contato</a></li>
+                    <li class="nav-item"  style="border-bottom:2px solid #FFFFFF"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+            
+            <button type="button" class="btn-default"><a href="/usuarios"><i class="fa-solid fa-user" style="color: #FFFFFF;"></i></a></button>
+            <% }else { %>
+                <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item"><a href="/sobrenos" style="border-bottom:2px solid #FFFFFF">Sobre nós</a></li>
+        </ul>
+        
+        <button class="btn-default"><a href="/login">Conta</a></button>
+        <% } %>
+        <button id="mobile-btn"><i id="menu-icon" class="fa-solid fa-bars" style="color: #FFFFFF;"></i></button>
+        </nav>
+    
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+            <li class="nav-item"><a href="/">Inicio</a></li>
+                <% if (usuario) { %>
+                <li class="nav-item"><a href="/monitoramento">Monitoramento</a></li>
+                <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item" style="border-bottom:2px solid #FFFFFF"><a href="/sobrenos">Sobre nós</a></li>
+            </ul>
+            
+            <button type="button" class="btn-default"><a href="/usuarios"><i class="fa-solid fa-user" style="color: #FFFFFF;"></i></a></button>
+            <% }else { %>
+                <li class="nav-item"><a href="/informacoes">Informações</a></li>
+                <li class="nav-item"><a href="/feedback">Contato</a></li>
+                <li class="nav-item" style="border-bottom:2px solid #FFFFFF"><a href="/sobrenos">Sobre nós</a></li>
+        </ul>
+        
+        <button class="btn-default"><a href="/login">Conta</a></button>
+        <% } %>
+        </div>
+    </header>
+
+    <section id="container">
+       
+
+        <main>
+            <div class="title">
+                <h1>Grupo fireard</h1>
+                <span>Criando com  responsábilidade. O grupo empenhado no desenvolvimento.</span>
+            </div>
+            <section class="group-content">
+            <div class="content">
+                <img src="assets/fundoLogin.png" alt="" class="imagen-guys-mobile">
+                <figure>
+                    <img src="assets/fundoLogin.png" alt="">
+                </figure>
+                <section class="content-text" id="content-text-laptop">
+                    <h2>Laykan Pardinho</h2>
+                    <span>Founder & CEO</span>
+                </section>
+                <section class="content-text" id="content-text-mobile"> <!--  sessão APENAS para mudar a resposividade no mobile -->
+                    <h2>Giullya Oliveira, Rafaely Xavier e Laykan Pardinho</h2>
+                    <span>Criadores e Desenvolvedores</span>
+                </section>
+            </div>
+
+            <div class="content" id="content-2"> <!-- estão com ID, pq coloquei para "desaparecerem" na responsividade -->
+                <figure>
+                    <img src="assets/fundoLogin.png" alt="">
+                </figure>
+                <section class="content-text">
+                    <h2>Laykan Pardinho</h2>
+                    <span>Founder & CEO</span>
+                </section>
+            </div>
+            
+            <div class="content" id="content-3">
+                <figure>
+                    <img src="assets/fundoLogin.png" alt="">
+                </figure>
+                <section class="content-text">
+                    <h2>Laykan Pardinho</h2>
+                    <span>Founder & CEO</span>
+                </section>
+            </div>
+        </section>
+        <div class="footer-content">
+            <p>Somos um grupo do 3º ano do Ensino Médio e criamos esse site para 
+                demonstrar as habilidades que desenvolvemos durante esses três anos de ETEC. </p>
+        </div>
+
+        </main>
+    </section>
+
+    <footer>
+        <p>Copyright 2024</p>
+         <p>Desenvolvido por Giullya, Laykan e Rafaely</p>
+    </footer>
+    <!-- javascript da header p/ mobile -->
+<script src="/js/menuMobile.js"></script>
+    
+</body>
+</html>
