@@ -1,7 +1,7 @@
 module.exports = function (app) {
     // Rota GET para exibir a página de feedback com erros ou campos vazios
     app.get('/feedback', function (req, res) {
-        res.render('feedback/feedback', { errosValidacao: {}, feedback: {} });
+        res.render('feedback/feedback', { usuario: req.session.usuario, errosValidacao: {}, feedback: {} });
     });
 
     // Rota POST para processar o feedback

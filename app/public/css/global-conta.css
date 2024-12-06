@@ -185,6 +185,21 @@ main #btn-criar:hover{
     background-color: #b51a1a;
 }
 
+.shake {
+    animation: shake 0.5s ease;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+.erro {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
 @media  (min-width: 0px) and (max-width: 1170px){
     main{
         min-height: 100%;

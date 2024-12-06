@@ -30,7 +30,7 @@ module.exports = function (app) {
                     req.session.usuario = usuario; // Salva o usuário na sessão
                     res.redirect('/'); // Redireciona para a página principal
                 } else {
-                    res.render('usuarios/login', { erro: 'Senha incorreta' }); // Retorna erro se a senha estiver incorreta
+                    res.render('usuarios/login', { erro: err }); // Retorna erro se a senha estiver incorreta
                 }
             });
         });

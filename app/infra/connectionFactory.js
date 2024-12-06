@@ -5,7 +5,7 @@ var connectMYSQL = function () {
       host: "localhost",
       user: "root",
       password: "",
-      database: "fireard",
+      database: "teste_fireard",
     });
   }
 
@@ -14,7 +14,7 @@ var connectMYSQL = function () {
       host: "localhost",
       user: "root",
       password: "",
-      database: "teste",
+      database: "livraria",
     });
   }
 };
